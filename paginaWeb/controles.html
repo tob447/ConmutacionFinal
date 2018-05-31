@@ -7,12 +7,15 @@
     <title>Trabajo Final</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
 
-  
+
 
 <!--
 Control domótica de una casa: La idea es hacer el control domótico de una casa donde el usuario vía web o desde el celular
-pueda controlar y monitorear algunos elementos de la casa como el encendido de las luces, las cortinas, la temperatura de la casa. 
+pueda controlar y monitorear algunos elementos de la casa como el encendido de las luces, las cortinas, la temperatura de la casa.
 (6 entradas y 4 salidas mínimo), manejando base de datos y perfiles.
 -->
 
@@ -25,16 +28,16 @@ pueda controlar y monitorear algunos elementos de la casa como el encendido de l
         <div class="col -sm col-auto" id="sistemaDomotica">
             <form>
                 <label for="sistema">Activar Sistema</label>
-                <input type="button" class="btn btn-primary pull-center" value="Prender">
-                <input type="button" class="btn btn-primary pull-center" value="Apagar">
+                <input type="button" id="systemOn" class="btn btn-primary pull-center" value="Prender">
+                <input type="button" id="systemOff" class="btn btn-primary pull-center" value="Apagar">
             </form>
         </div>
         <br>
         <div class="col -sm col-auto " id="luces">
             <form>
                 <label for="luz">Luces</label>
-                <input type="button" class="btn btn-primary pull-center" value="Prender">
-                <input type="button" class="btn btn-primary pull-center" value="Apagar">
+                <input type="button" id="lightsOn" class="btn btn-primary pull-center" value="Prender">
+                <input type="button" id="lightsOff" class="btn btn-primary pull-center" value="Apagar">
             </form>
         </div>
         <br>
@@ -65,12 +68,12 @@ pueda controlar y monitorear algunos elementos de la casa como el encendido de l
         <br>
         <br>
         <div class="row">
-        
+
         <div class="temperatura col -sm">
             <form>
                 <label for="unTemperatura">Temperatura</label>
                 <br>
-                <p> 20℃</p>
+                <p id="Temperature"> 20℃</p>
             </form>
         </div>
         <br>
@@ -78,7 +81,7 @@ pueda controlar y monitorear algunos elementos de la casa como el encendido de l
             <form>
                 <label for="unaHumedad">Humedad</label>
                 <br>
-                <p> 30% </p>
+                <p id="Humidity"> 30% </p>
             </form>
         </div>
         </div>
