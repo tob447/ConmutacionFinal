@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta refresca las paginas automaticamente-->
+    <!--<meta http-equiv="refresh" content="60"> -->
+    <title>Trabajo Final</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+
+
+<!--
+Control domótica de una casa: La idea es hacer el control domótico de una casa donde el usuario vía web o desde el celular
+pueda controlar y monitorear algunos elementos de la casa como el encendido de las luces, las cortinas, la temperatura de la casa.
+(6 entradas y 4 salidas mínimo), manejando base de datos y perfiles.
+-->
+
+
+<body>
+        <div class="row">
+          <div class="col">
+            <h1>Sistema Domotica</h1>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Este es el contenedor de las acciones-->
+          <div id="acciones" class="border col">
+            <!-- fila1-->
+            <div class="row">
+              <div class="col">
+                <h4 class="subText">Opciones</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="sistemaDomotica">
+                  <form>
+                      <label for="sistema">Activar Sistema</label>
+                      <input type="button" id="systemOn" class="btn btn-primary btn-block" value="Prender">
+                      <input type="button" id="systemOff" class="btn btn-primary btn-block" value="Apagar">
+                  </form>
+              </div>
+              <div class="col" id="luces">
+                  <form>
+                      <label for="luz">Luces</label>
+                      <input type="button" id="lightsOn" class="btn btn-primary btn-block" value="Prender">
+                      <input type="button" id="lightsOff" class="btn btn-primary btn-block" value="Apagar">
+                  </form>
+              </div>
+            </div>
+            <!-- fila2-->
+            <div class="row">
+              <div class="col">
+                <label for="plantas">Regador plantas</label>
+                <input type="button" class="btn btn-primary btn-block" value="Prender">
+                <input type="button" class="btn btn-primary btn-block" value="Apagar">
+              </div>
+
+              <div class="col">
+                <label for="unGaraje">Puerta garaje</label>
+                <input type="button" class="btn btn-primary btn-block" value="Abrir puerta">
+                <input type="button" class="btn btn-primary btn-block" value="Cerrar puerta">
+              </div>
+
+          </div>
+        </div>
+        <!-- Este es el lado derecho de la primera fila-->
+          <div class="border col ">
+            <div class="row">
+              <div class="col">
+                <h4>Temperatura<h4>
+              </div>
+              <div class="col">
+                <h4>Humedad</h4>
+              </div>
+            </div>
+            <div class="row dataAct">
+              <div class="col">
+                <p class="act" >26</p>
+              </div>
+              <div class="col">
+                <p class="act">36</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row border">
+          <div class="col">
+            <h3>Historial<h3>
+          </div>
+        </div>
+        <!-- El sistema domotica incluye el sensor de distancia y buzzer-->
+    </body>
+</html>
